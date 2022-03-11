@@ -3,5 +3,10 @@ server:
 spring:
   application:
     name: config-server
-  profiles:
-    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/italoFelipeDev/curso-microservice
+          default-label: master
+          search-paths: 'config*'
