@@ -1,0 +1,15 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: greeting-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+greeting-service:
+  greeting: "Hola"
+  default-value: "Mundo"
