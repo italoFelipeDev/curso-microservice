@@ -1,0 +1,22 @@
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet id="19072021175300-1" author="italo.galdino">
+        <createTable tableName="TB_CAMBIO">
+            <column name="ID" type="NUMBER(9,0)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="FROM" type="VARCHAR(50)">
+            </column>
+            <column name="TO" type="VARCHAR">
+            </column>
+            <column name="CONVERSION_FACTOR" type="DECIMAL">
+            </column>
+            <column name="CONVERTED_VALUE" type="DECIMAL">
+            </column>
+            <column name="ENVIROMENT" type="VARCHAR">
+            </column>
+        </createTable>
+        <addPrimaryKey tableName="TB_CAMBIO" columnNames="ID"/>
+        <createSequence sequenceName="SQ_CAMBIO" startValue="1" incrementBy="1"/>
+    </changeSet>
+</databaseChangeLog>
