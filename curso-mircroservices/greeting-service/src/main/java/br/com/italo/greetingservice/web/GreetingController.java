@@ -18,9 +18,7 @@ public class GreetingController {
     private final GreetingConfiguration configuration;
 
     @RequestMapping("/greeting")
-    public Greeting greeting(
-            @RequestParam(value = "name",
-                    defaultValue = "") String name) {
+    public Greeting greeting(@RequestParam(value = "name", defaultValue = "") String name) {
         if (name.isEmpty()) name = configuration.getDefaultValue();
         return new Greeting(
                 counter.incrementAndGet(),
